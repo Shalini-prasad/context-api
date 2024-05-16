@@ -5,13 +5,13 @@ function Login() {
 	const [username, setUsername] = useState("");
 	const [Password, setPassword] = useState("");
 
-	// Part 4
+	// Part 4: Consume the context in any child component using useContext.
 	// use UserContext
 	const { setUser } = useContext(UserContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setUser(username, Password);
+		setUser({ username, Password });
 	};
 	return (
 		<div>
